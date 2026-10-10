@@ -1,0 +1,82 @@
+{
+    "project_name": "AI-Based TB-COVID Co-Infection Risk Analysis",
+    "created_at": "2026-10-10T15:34:36.576028",
+    "dataset": {
+        "file": "2.13_TB_COVID.csv",
+        "total_records_used": 36,
+        "training_records": 27,
+        "testing_records": 9,
+        "number_of_features": 9
+    },
+    "features": [
+        "Public_Screened_Count",
+        "Private_Screened_Count",
+        "Total_Screened_Count",
+        "Public_Detected_Count",
+        "Private_Detected_Count",
+        "Total_Detected_Count",
+        "Public_Detection_Percentage",
+        "Private_Detection_Percentage",
+        "Total_Detection_Percentage"
+    ],
+    "target": "Screening_Performance_Category",
+    "class_names": [
+        "High",
+        "Low",
+        "Moderate"
+    ],
+    "class_distribution": {
+        "Moderate": 20,
+        "High": 8,
+        "Low": 8
+    },
+    "models": {
+        "Random_Forest": {
+            "accuracy": 0.4444444444444444,
+            "confusion_matrix": [
+                [
+                    0,
+                    0,
+                    2
+                ],
+                [
+                    0,
+                    0,
+                    2
+                ],
+                [
+                    0,
+                    1,
+                    4
+                ]
+            ]
+        },
+        "Neural_Network": {
+            "accuracy": 0.4444444444444444,
+            "confusion_matrix": [
+                [
+                    0,
+                    1,
+                    1
+                ],
+                [
+                    0,
+                    0,
+                    2
+                ],
+                [
+                    0,
+                    1,
+                    4
+                ]
+            ]
+        }
+    },
+    "best_model_by_test_accuracy": "Random_Forest",
+    "limitations": [
+        "Small state-level dataset",
+        "Screening categories are derived from coverage",
+        "No individual patient risk predictions",
+        "Test accuracy is exploratory"
+    ]
+}

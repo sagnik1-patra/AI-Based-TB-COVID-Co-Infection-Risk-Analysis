@@ -1,0 +1,50 @@
+project_name: AI-Based TB-COVID Co-Infection Risk Analysis
+dataset:
+  file_name: 2.13_TB_COVID.csv
+  path: C:\Users\sagni\Downloads\AI-Based TB-COVID Co-Infection Risk Analysis\2.13_TB_COVID.csv
+  records_used: 36
+  original_columns: 13
+target:
+  column: Screening_Performance_Category
+  type: multiclass_classification
+  thresholds:
+    low: coverage < 50%
+    moderate: 50% <= coverage < 80%
+    high: coverage >= 80%
+  classes:
+  - High
+  - Low
+  - Moderate
+features:
+- Public_Screened_Count
+- Private_Screened_Count
+- Total_Screened_Count
+- Public_Detected_Count
+- Private_Detected_Count
+- Total_Detected_Count
+- Public_Detection_Percentage
+- Private_Detection_Percentage
+- Total_Detection_Percentage
+random_forest:
+  n_estimators: 100
+  max_depth: 5
+  min_samples_leaf: 2
+  random_state: 42
+  accuracy: 0.4444444444444444
+neural_network:
+  hidden_layers:
+  - 32
+  - 16
+  activation: relu
+  output_activation: softmax
+  optimizer: adam
+  loss: sparse_categorical_crossentropy
+  epochs_max: 100
+  batch_size: 8
+  accuracy: 0.4444444444444444
+output_files:
+  h5: C:\Users\sagni\Downloads\AI-Based TB-COVID Co-Infection Risk Analysis\tb_covid_model.h5
+  pkl: C:\Users\sagni\Downloads\AI-Based TB-COVID Co-Infection Risk Analysis\tb_covid_model.pkl
+  yaml: C:\Users\sagni\Downloads\AI-Based TB-COVID Co-Infection Risk Analysis\tb_covid_config.yaml
+  json: C:\Users\sagni\Downloads\AI-Based TB-COVID Co-Infection Risk Analysis\tb_covid_metadata.json
+  nn_preprocessor: C:\Users\sagni\Downloads\AI-Based TB-COVID Co-Infection Risk Analysis\tb_covid_nn_preprocessor.pkl

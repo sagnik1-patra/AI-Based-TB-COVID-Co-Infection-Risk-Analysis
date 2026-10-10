@@ -1,0 +1,24 @@
+project: AI-Based TB-COVID Co-Infection Risk Analysis
+optimization: Artificial Immune System - Clonal Selection
+dataset: C:\Users\sagni\Downloads\AI-Based TB-COVID Co-Infection Risk Analysis\2.13_TB_COVID.csv
+random_state: 42
+ais_parameters:
+  population_size: 12
+  generations: 12
+  top_antibodies: 4
+  clones_per_antibody: 4
+  random_new_antibodies: 3
+  cv_folds: 3
+best_parameters:
+  n_estimators: 63
+  max_depth: 3
+  min_samples_leaf: 2
+selected_features:
+- Total_Screened_Count
+- Private_Detected_Count
+class_names:
+- High
+- Low
+- Moderate
+best_fitness: 0.5736700336700337
+test_accuracy: 0.3333333333333333

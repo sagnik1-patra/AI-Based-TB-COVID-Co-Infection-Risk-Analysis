@@ -1,0 +1,27 @@
+project_name: AI-Based TB-COVID Co-Infection Risk Analysis
+optimization_method: Particle Swarm Optimization
+dataset: C:\Users\sagni\Downloads\AI-Based TB-COVID Co-Infection Risk Analysis\2.13_TB_COVID.csv
+random_state: 42
+pso_parameters:
+  particles: 12
+  iterations: 15
+  inertia_weight: 0.7
+  cognitive_coefficient: 1.5
+  social_coefficient: 1.5
+  cv_folds: 3
+best_parameters:
+  n_estimators: 67
+  max_depth: 8
+  min_samples_leaf: 3
+selected_features:
+- Public_Screened_Count
+- Private_Screened_Count
+- Total_Screened_Count
+- Private_Detected_Count
+- Public_Detection_Percentage
+class_names:
+- High
+- Low
+- Moderate
+best_fitness: 0.608641975308642
+test_accuracy: 0.6666666666666666

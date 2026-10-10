@@ -1,0 +1,10 @@
+State_UT,Total_Screening_Percentage,Total_Detection_Percentage,Actual_Category,Predicted_Category,Actual_Encoded,Predicted_Encoded,Correct_Prediction
+Arunachal Pradesh,58.5,0.0,Moderate,Low,2,1,False
+Assam,54.7,0.18,Moderate,Moderate,2,2,True
+Goa,48.2,1.2,Low,Low,1,1,True
+Haryana,72.3,0.09,Moderate,Moderate,2,2,True
+Kerala,69.5,2.2,Moderate,Moderate,2,2,True
+Lakshadweep,95.5,0.0,High,Low,0,1,False
+Maharashtra,70.9,0.24,Moderate,Moderate,2,2,True
+Sikkim,39.8,0.71,Low,Low,1,1,True
+Telangana,92.4,0.14,High,Moderate,0,2,False
